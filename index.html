@@ -8,17 +8,30 @@
 			border-radius: 0 !important;
 			background-color: #272822;
 		}
+		.info {
+			font-size: 20px;
+			color: #fff;
+			width: 100%;
+			text-align: center;
+			margin-top: 100px;
+		}
 	</style>
 	<link rel="stylesheet" href="prism.css" data-noprefix>
 </head>
 <body>
-<pre id="code"></pre>
+<pre id="code">
+<div class="info">https://mtk3d.github.io/gist-code-highlighter/?url={url to your gists raw}</div>
+</pre>
 <script type="text/javascript">
 	var parameter = window.location.search.replace( "?", "" );
 	var values = parameter.split("=");
 	var code = document.getElementById("code");
+	var address = values[1];
 
-	code.setAttribute("data-src", values[1]);
+	if(address != "")
+	{
+		code.setAttribute("data-src", address);
+	}
 </script>
 <script src="prism.js"></script>
 </body>
