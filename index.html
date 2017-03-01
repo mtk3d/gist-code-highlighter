@@ -14,12 +14,10 @@
 <pre id="code"></pre>
 <script type="text/javascript">
 	var parameter = window.location.search.replace( "?", "" );
-
 	var values = parameter.split("=");
 	var code = document.getElementById("code");
 
 	code.setAttribute("data-src", values[1]);
-
 </script>
 <script src="prism.js"></script>
 </body>
