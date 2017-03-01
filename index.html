@@ -25,10 +25,11 @@
 <script type="text/javascript">
 	var parameter = window.location.search.replace( "?", "" );
 	var values = parameter.split("=");
-	var code = document.getElementById("code");
 	var address = values[1];
 
-	if(address != "")
+	var code = document.getElementById("code");
+	
+	if(address != "" && typeof(address) != 'undefined')
 	{
 		code.setAttribute("data-src", address);
 	}
