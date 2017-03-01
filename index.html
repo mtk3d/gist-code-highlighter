@@ -20,15 +20,12 @@
 </head>
 <body>
 <pre id="code">
-<div class="info">https://mtk3d.github.io/gist-code-highlighter/?url={url to your gists raw}</div>
+<div class="info">https://mtk3d.github.io/gist-code-highlighter/index.html?{url to your gists raw}</div>
 </pre>
 <script type="text/javascript">
-	var parameter = window.location.search.replace( "?", "" );
-	var values = parameter.split("=");
-	var address = values[1];
-
+	var address= window.location.search.replace( "?", "" );
 	var code = document.getElementById("code");
-	
+
 	if(address != "" && typeof(address) != 'undefined')
 	{
 		code.setAttribute("data-src", address);
