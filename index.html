@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Highlighter</title>
+	<style type="text/css">
+		html, body, pre {
+			margin: 0 !important;
+			border-radius: 0 !important;
+		}
+	</style>
+	<link rel="stylesheet" href="prism.css" data-noprefix />
+</head>
+<body>
+<pre id="code" data-src="prism.js"></pre>
+<script type="text/javascript">
+	var parameter = window.location.search.replace( "?", "" );
+
+	var values = parameter.split("=");
+	var code = document.getElementById("code");
+
+	code.setAttribute("data-src", values[1]);
+
+</script>
+<script src="prism.js"></script>
+</body>
+</html>
